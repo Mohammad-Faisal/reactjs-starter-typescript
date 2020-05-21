@@ -15,6 +15,22 @@ export default class CartAction {
             await ActionUtility._createThunkEffect(dispatch, CartAction.REQUEST_GET_CART_ITEMS, CartEffect._requestGetCartItems, objectId )
         }
     }
+
+    static ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART';
+    static REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART';
+    static CLEAR_CART = 'CLEAR_CART';
+
+    static _addItemToCart(product) {
+        return ActionUtility._createAction(CartAction.ADD_ITEM_TO_CART, product)
+    }
     
+    static _removeItemFromCart(product) {
+        return ActionUtility._createAction(CartAction.REMOVE_ITEM_FROM_CART, product)
+    }
+
+    static _clearCart(product) {
+        return ActionUtility._createAction(CartAction.CLEAR_CART, product)
+    }
+
  
 }

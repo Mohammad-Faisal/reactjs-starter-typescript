@@ -22,9 +22,10 @@ import { PersistGate } from 'redux-persist/integration/react';
       <React.StrictMode>
 
         <Provider store={store.store}>
-          <PersistGate loading={null} persistor={store.persistor}>
-            <Component history={history}  />
-          </PersistGate>
+        <Component history={history} dispatch={store.dispatch} />
+          {/* <PersistGate loading={null} persistor={store.persistor}>
+            <Component history={history} dispatch={store.dispatch} />
+          </PersistGate> */}
         </Provider>
       </React.StrictMode>
       ,

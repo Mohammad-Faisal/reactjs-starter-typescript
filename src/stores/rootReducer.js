@@ -7,6 +7,7 @@ import ToastsReducer from './special/toasts/ToastsReducer';
 import FinishedReducer from "./special/finished/FinishedReducer";
 import MiscReducer from './misc/MiscReducer';
 import CartReducer from './cart/CartReducer'
+import ProductReducer from './product/ProductReducer';
 
 
 export default (history) => {
@@ -14,11 +15,14 @@ export default (history) => {
         error: ErrorReducer.reducer,
         requesting: RequestingReducer.reducer,
         finished: FinishedReducer.reducer,
+        
         router: connectRouter(history),
+
         toasts: new ToastsReducer().reducer,
         misc: new MiscReducer().reducer,
         
         cart: new CartReducer().reducer,
+        product: new ProductReducer().reducer,
     };
 
     return combineReducers(reducerMap);

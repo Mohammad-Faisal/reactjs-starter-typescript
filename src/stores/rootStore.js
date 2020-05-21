@@ -4,9 +4,10 @@ import thunk from 'redux-thunk';
 import { routerMiddleware } from 'connected-react-router';
 import rootReducer from './rootReducer';
 import errorToastMiddleware from './special/middlewares/errorToastMiddleware';
-import DeletePostEffect from './cart/CartPostEffect';
 import storage from 'redux-persist/lib/storage';
+
 import CartPostEffect from './cart/CartPostEffect';
+import ProductPostEffect from './product/ProductPostEffect';
 
 const persistConfig = {
     key: "rokkhi-home-web",
@@ -26,8 +27,9 @@ export default (initialState, history) => {
             routerMiddleware(history),
             errorToastMiddleware(),
             CartPostEffect(),
-            DeletePostEffect() ,
+            ProductPostEffect(),
         ));
     let persistor = persistStore(store)
     return { store, persistor };
 };
+
