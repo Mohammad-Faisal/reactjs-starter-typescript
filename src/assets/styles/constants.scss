@@ -1,0 +1,171 @@
+// $blueColor: #0079bf;
+$blueColor: #0079bf;
+$lightBlueColor: rgba(0, 121, 191, 0.541);
+
+$redColor: #dc143c;
+$lightRedColor: rgba(240, 128, 128, 0.432);
+
+$orangeColor: #ff8c00;
+$lightOrangeColor: rgba(255, 166, 0, 0.473);
+
+$greenColor: rgb(27, 155, 112);
+$lightGreenColor: rgb(168, 214, 193);
+
+$pinkColor: #c38d9e;
+$darkOrange: #e8a87c;
+$darkRed: #e27d60;
+$darkGreen: #41b3a3;
+
+$color1: #99738e;
+$color2: #bc986a;
+$color3: #daad86;
+$color4: #55bcc9;
+$color5: #97caef;
+$color5: #cafafe;
+$color6: #907163;
+$color7: #45a29e;
+$color8: #1f2833;
+$color9: #0b0c10;
+$color10: #116466;
+
+
+$greenTheme0:#17252a;
+$greenTheme1:#05386b;
+$greenTheme2:#379683;
+$greenTheme3:#5cdb95;
+$greenTheme4:#8ee4af;
+$greenTheme5:#edf5e1;
+
+
+
+$whiteColor: #fff;
+$greyColor: rgba(238, 238, 238, 0.493);
+$lightGreyColor: rgba(238, 238, 238, 0);
+$blackColor: #37474f;
+$textRedColor: #fe3935;
+$textBlueColor: #0079bf;
+$textBlackColor: #37474f;
+$appBackground: #eff1f1;
+$magentaColor: #19b4b4;
+
+
+//$appThemeColor : #14AB72;
+$appThemeColor : #37474f;
+
+
+.text-red {
+  color: $textRedColor;
+}
+
+.text-black {
+  color: $textBlackColor;
+}
+
+.text-blue {
+  color: $textBlueColor;
+}
+.text-orange {
+  color: $orangeColor;
+}
+.text-green {
+  color: rgb(76, 196, 116);
+}
+.text-magenta {
+  color: $magentaColor;
+}
+
+.text-green-deep {
+  color: rgb(69, 179, 105);
+}
+
+.background-green {
+  background: $greenColor;
+}
+
+.background-blue {
+  background: $textBlueColor;
+}
+.background-magenta {
+  background: $magentaColor;
+}
+.background-orange {
+  background: $color10;
+}
+
+.background-color {
+  background: #eff1f1;
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(55, 71, 79, 0.37);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(55, 71, 79, 0.37);
+  box-shadow: 1px 2px 4px 0px rgba(55, 71, 79, 0.37);
+}
+
+@mixin neomorphic-card{
+  box-shadow: 6px 6px 12px rgba(163,177,198,0.6),
+  -9px -9px 16px rgba(255,255,255, 0.5);
+}
+
+@mixin shadowBottom {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+@mixin card {
+  background-color: white;
+  //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.14),
+  0 2px 1px -1px rgba(0,0,0,.12), 0 1px 3px 0 rgba(0,0,0,.2);
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+@mixin gridTwoColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+//text input
+
+.text-input-icon-container {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-column-gap:5px;
+  // background: $greyColor;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 0.5px solid rgba(203, 207, 206, 0.404);
+}
+
+.icon-text-input-box {
+  // background: $greyColor;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.text-input-background {
+  // background: $lightGreyColor;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.title-over-input{
+  font-size: 12px;
+  text-align: start;
+}
+
+.title-over-table{
+  font-size: 25px;
+  text-align: start;
+  align-self: center;
+}
+
