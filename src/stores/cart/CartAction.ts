@@ -28,8 +28,8 @@ export default class CartAction {
         return ActionUtility._createAction(CartAction.REMOVE_ITEM_FROM_CART, product)
     }
 
-    static _clearCart(product) {
-        return ActionUtility._createAction(CartAction.CLEAR_CART, product)
+    static _clearCart() {
+        return ActionUtility._createAction(CartAction.CLEAR_CART)
     }
 
  

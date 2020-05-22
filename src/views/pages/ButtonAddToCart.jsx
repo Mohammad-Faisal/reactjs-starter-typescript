@@ -20,8 +20,9 @@ const ButtonAddToCart = (props) => {
     })
 
     useEffect(() => {
-        
+        console.log(cartItems);
     }, [cartItems])
+
 
     return (
         <div style={{ padding: "20px" }}>

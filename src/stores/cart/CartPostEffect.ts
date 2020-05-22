@@ -3,7 +3,6 @@ import CartAction from "./CartAction";
 
 const CartPostEffect = () => (store) => (next) => (action) => {
 
-
     if (!action.error) {
         switch (action.type) {
             case CartAction.ADD_ITEM_TO_CART:

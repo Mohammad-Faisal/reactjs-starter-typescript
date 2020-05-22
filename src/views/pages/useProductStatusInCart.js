@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
 
 export default function useProductStatusInCart(productId) {
@@ -15,18 +15,27 @@ export default function useProductStatusInCart(productId) {
     const [productCount, setProductcount] = useState(0);
 
     useEffect(() => {
+
         
-        const hasCurrentProduct = cartItems.hasOwnProperty(productId);
-        
-        if(hasCurrentProduct) {
-            setProductcount(cartItems[productId].productCount)
+        let productCount = 0;
+        if(cartItems){
+            //console.log(cartItems);
+            cartItems.forEach(element => {
+                if(element.id === productId ) productCount++;
+            });    
+        }
+
+        console.log( productId , productCount)
+  
+        if(productCount> 0) {
+            setProductcount(productCount)
             setProductStatus(PRODUCT_ADDED);
         }
         else {
-            setProductcount(0)
+            setProductcount(productCount)
             setProductStatus(PRODUCT_REMOVED);
         }        
-    } , [cartItems , productId]);
+    } , [cartItems]);
 
     return {productStatus , productCount};
 }
