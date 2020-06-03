@@ -1,12 +1,20 @@
 import React from 'react';
-import './App.css';
-import {PageProduct} from './pages/PageProduct';
+import './App.scss';
+import './pages/pages.scss';
+import { PageProduct } from './pages/PageProduct';
 
 function App() {
   return (
-    <div className="App">
-       
+    <div className="container-app">
+      <div className="container-app-topbar">
+        This is the topbar
+        </div>
+      <div className="container-app-mainbar">
+
+        <div> this is the siebar</div>
         <PageProduct />
+      </div>
+
     </div>
   );
 }

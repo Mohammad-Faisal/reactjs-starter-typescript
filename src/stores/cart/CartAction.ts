@@ -19,6 +19,7 @@ export default class CartAction {
     static ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART';
     static REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART';
     static CLEAR_CART = 'CLEAR_CART';
+    static REMOVE_PRODUCT_FROM_CART = 'REMOVE_PRODUCT_FROM_CART';
 
     static _addItemToCart(product) {
         return ActionUtility._createAction(CartAction.ADD_ITEM_TO_CART, product)
@@ -26,6 +27,12 @@ export default class CartAction {
     
     static _removeItemFromCart(product) {
         return ActionUtility._createAction(CartAction.REMOVE_ITEM_FROM_CART, product)
+    }
+
+
+    static _removeProductFormCart(product) {
+        return ActionUtility._createAction(CartAction.REMOVE_PRODUCT_FROM_CART, product)
+
     }
 
     static _clearCart() {

@@ -1,7 +1,6 @@
 import BaseReducer from '../../utils/BaseReducer';
-import BaseResponse from '../../models/BaseResponse';
 import CartAction from './CartAction';
-
+import _ from 'lodash';
 
 export default class CartReducer extends BaseReducer {
 
@@ -14,6 +13,22 @@ export default class CartReducer extends BaseReducer {
         const product  =  {...action.payload};
         const cartItems = state.cartItems;
         let currentCartItems = cartItems.concat([product]);
+        
+        return {
+            ...state,
+            cartItems: currentCartItems,
+        };
+    }
+
+    [CartAction.REMOVE_PRODUCT_FROM_CART](state, action) {
+
+        const product  =  {...action.payload};
+        const cartItems = state.cartItems;
+        var currentCartItems =[];
+        for(let i=0;i<cartItems.length ;i++){
+            const item = cartItems[i];
+            if(item.id !== product.id) currentCartItems.push(item);
+        }
 
         return {
             ...state,
@@ -26,7 +41,6 @@ export default class CartReducer extends BaseReducer {
     [CartAction.REMOVE_ITEM_FROM_CART](state, action) {
 
         let currentCartItems = state.cartItems.concat([]);
-
         for (var i = 0; i < currentCartItems.length; i++) {
             if (currentCartItems[i].id === action.payload.id) {
                 currentCartItems.splice(i, 1);
@@ -34,15 +48,9 @@ export default class CartReducer extends BaseReducer {
             }
         }
 
-        console.log({
-            ...state,
-            cartItems: currentCartItems,
-        });
-
         return {
             ...state,
             cartItems: currentCartItems,
-            //cartItems: "asdf",
         };
     }
 

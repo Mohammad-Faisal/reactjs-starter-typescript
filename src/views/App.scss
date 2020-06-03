@@ -1,0 +1,15 @@
+.container-app {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+
+.container-app-topbar {
+  display: grid;;
+  background-color: aqua;
+}
+
+.container-app-mainbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}

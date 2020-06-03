@@ -1,7 +1,7 @@
 
 import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import useProductStatusInCart from './useProductStatusInCart';
+import useProductStatusInCart from '../hooks/useProductStatusInCart';
 import CartAction from '../../stores/cart/CartAction';
 
 
@@ -20,13 +20,13 @@ const ButtonAddToCart = (props) => {
     })
 
     useEffect(() => {
-        console.log(cartItems);
+       // console.log(cartItems);
     }, [cartItems])
 
 
     return (
-        <div style={{ padding: "20px" }}>
-            {productStatus === "PRODUCT_ADDED" ?
+        <div style={{ padding: "20px" , border:"1px solid"}}>
+            {productStatus === "PRODUCT_IN_CART" ?
                 <div>
                     <button onClick={removeItemFromCart}> -1 </button>
 
