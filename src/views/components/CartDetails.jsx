@@ -2,17 +2,16 @@
 import React, { useCallback, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTotalItemCount, selectTotalCost } from '../../stores/cart/CartSelector';
-import ProductSummary from './ProductSummary';
+import ProductInCart from './ProductInCart';
 import _ from 'lodash';
 
-import { useBooleanKnob } from '@stardust-ui/docs-components'
-import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { CartIconLarge, CloseIconMedium } from './IconsProvider';
 
 
 const CartDetails = (props) => {
 
     const dispatch = useDispatch();
-    const [visible, setVisible] = useBooleanKnob({ name: 'visible' })
+    const [visible, setVisible] = useState(true)
     const cartItems = useSelector(state => state.cart.cartItems);
     const [cartIndividualItems, setCartIndividualItems] = useState([])
     const totalCost = useSelector(selectTotalCost);
@@ -25,34 +24,22 @@ const CartDetails = (props) => {
 
 
     return (
-        <Sidebar.Pushable as={Segment}>
-            <Sidebar
-                as={Menu}
-                animation='overlay'
-                icon='labeled'
-                inverted
-                onHide={() => setVisible(false)}
-                vertical
-                visible={visible}
-                width='thin'
-            >
+        <div className="container-cart-details">
+            <div className="container-cart-details-topbar">
+                <div className="cart-details-cart-items"> <CartIconLarge /> {totalItem} items  </div>
+                <div> <CloseIconMedium /></div>
+            </div>
+            <div className="container-cart-details-items">
+                {cartIndividualItems.map(productItem => <ProductInCart productItem={productItem} />)}
+            </div>
+            <div className="checkout-button-cart-details">
 
-                <div style={{ padding: "20px", border: "1px solid" }}>
-                    <b>Cart Details</b>
-                    {cartIndividualItems.map(productItem => <ProductSummary productItem={productItem} />)}
-                    <div> Total amount : {totalCost}</div>
-                    <div> Total items : {totalItem} </div>
-                </div>
+                <div className="checkout-text"style={{ color: "#fff", fontWeight: "bold" }}> Checkout </div>
+                <div className="checkout-round-text">$ {totalCost}</div>
 
-            </Sidebar>
+            </div>
 
-            <Sidebar.Pusher>
-                <Segment basic>
-                    <Header as='h3'>Application Content</Header>
-                    <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-                </Segment>
-            </Sidebar.Pusher>
-        </Sidebar.Pushable>
+        </div>
 
 
     )

@@ -3,7 +3,7 @@ import './App.scss';
 import './pages/pages.scss';
 import './components/components.scss'
 import { PageProduct } from './pages/PageProduct';
-import CartPreview from './components/CartPreview';
+import CartDetails from './components/CartDetails';
 import styled from 'styled-components';
 
 function App() {
@@ -19,11 +19,10 @@ function App() {
       </div>
 
       <div className="container-app-mainbar">
-
         <div> this is the siebar</div>
         <PageProduct />
       </div>
-      
+     
 
     </AppContainer>
   );

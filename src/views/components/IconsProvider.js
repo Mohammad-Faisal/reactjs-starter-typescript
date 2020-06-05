@@ -5,15 +5,21 @@ import {shoppingCart} from 'react-icons-kit/typicons/shoppingCart'
 import {plus} from 'react-icons-kit/typicons/plus'
 import {minus} from 'react-icons-kit/typicons/minus'
 
+import {trash} from 'react-icons-kit/typicons/trash'
+import {times} from 'react-icons-kit/typicons/times'
 
 
 
 
 const IconContainer = withBaseIcon({ size:20 })
+const IconContainerLarge = withBaseIcon({ size:24 })
 
 export const CartIconMedium = () => <IconContainer icon={shoppingCart}/>;
+export const CartIconLarge = () => <IconContainerLarge icon={shoppingCart}/>;
 export const PlusIconMedium = () => <IconContainer icon={plus}/>;
 export const MinusIconMedium = () => <IconContainer icon={minus}/>;
+export const DeleteIconMedium = () => <IconContainerLarge icon={trash}/>;
+export const CloseIconMedium = () => <IconContainer icon={times}/>;
 
 
 

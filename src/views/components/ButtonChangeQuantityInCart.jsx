@@ -6,7 +6,7 @@ import CartAction from '../../stores/cart/CartAction';
 import { CartIconMedium, PlusIconMedium, MinusIconMedium } from './IconsProvider';
 
 
-const ButtonAddToCart = (props) => {
+const ButtonChangeQuantityInCart = (props) => {
 
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.cartItems);
@@ -20,27 +20,14 @@ const ButtonAddToCart = (props) => {
         dispatch(CartAction._removeItemFromCart(props.productItem));
     })
 
-    // useEffect(() => {
-    //     // console.log(cartItems);
-    // }, [cartItems])
-
     return (
-
-        <div>
-            {productStatus === "PRODUCT_IN_CART" ?
-                <div className="container-add-to-cart-quantity-horizontal" >
-                    <div onClick={removeItemFromCart}> <MinusIconMedium /> </div>
-                    <div> {productCount}</div>
-                    <div onClick={additemToCart}> <PlusIconMedium /> </div>
-                </div> :
-                <div className="button-add-to-cart" onClick={additemToCart}>
-                    <CartIconMedium />
-                    <div> Cart</div>
-                </div>
-            }
+        <div className="container-add-to-cart-quantity-vertical">
+            <div onClick={additemToCart}> <PlusIconMedium /> </div>
+            <div> {productCount}</div>
+            <div onClick={removeItemFromCart}> <MinusIconMedium /> </div>
         </div>
 
     )
 }
 
-export default ButtonAddToCart;
+export default ButtonChangeQuantityInCart;
