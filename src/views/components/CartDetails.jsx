@@ -2,7 +2,7 @@
 import React, { useCallback, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTotalItemCount, selectTotalCost } from '../../stores/cart/CartSelector';
-import ProductSummary from '../pages/ProductSummary';
+import ProductSummary from './ProductSummary';
 import _ from 'lodash';
 
 const CartDetails = (props) => {

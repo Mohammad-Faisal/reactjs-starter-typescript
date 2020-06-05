@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTotalItemCount , selectTotalCost } from '../../stores/cart/CartSelector';
-
+import {CartPreviewCartIcon} from './IconsProvider';
 
 const CartPreview = (props) => {
 
@@ -16,11 +16,10 @@ const CartPreview = (props) => {
         console.log(cartItems);
     }, [cartItems])
 
-
     return (
-        <div style={{ padding: "20px" , border:"1px solid"}}>
-            <div> Total amount : {totalCost}</div>
-            <div> Total items : {totalItem} </div>
+        <div className='container-cart-preview' >
+            <div className="cart-preview-items"> <CartPreviewCartIcon /> {totalItem} items </div>
+            <div className="cart-preview-amount"> $ {totalCost}</div>
         </div>
     )
 }

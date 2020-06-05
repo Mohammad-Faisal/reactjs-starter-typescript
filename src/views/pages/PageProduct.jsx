@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ProductSummary from './ProductSummary';
+import ProductSummary from '../components/ProductSummary';
 import CartPreview from '../components/CartPreview';
 import CartDetails from '../components/CartDetails';
 
@@ -12,11 +12,11 @@ export const PageProduct = (props) => {
     return (
         <div className="container-products">
             {productList.map(productItem => <ProductSummary productItem={productItem} />)}
-
-            <CartPreview />
-
             <CartDetails />
+            <CartPreview />
         </div>
+
     )
 
 }
+

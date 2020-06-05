@@ -1,0 +1,30 @@
+@import '../constants.scss';
+
+
+//cart preview 
+
+.container-cart-preview {
+    background-color: $primaryColor;
+    position : fixed;
+    padding: 20px;
+    border-radius: 8px 0px 0px 8px;
+    bottom   : 300px;
+    right    : 0px;
+    color: #fff;
+}
+
+.cart-preview-items {
+    padding: 10px 20px;
+}
+
+.cart-preview-amount{
+    margin: 0px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: $primaryColor;
+    font-weight: bold;
+}
+
+
+//product summary
