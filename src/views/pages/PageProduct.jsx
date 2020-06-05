@@ -10,9 +10,9 @@ export const PageProduct = (props) => {
     const productList = useSelector(state => state.product.productList);
 
     return (
-        <div className="container-products">
+        <div className="container-page-products">
             {productList.map(productItem => <ProductSummary productItem={productItem} />)}
-            <CartDetails />
+            {/* <CartDetails /> */}
             <CartPreview />
         </div>
 

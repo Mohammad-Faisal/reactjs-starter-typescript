@@ -1,104 +1,125 @@
 // $blueColor: #0079bf;
 
 $primaryColor: rgb(0, 158, 127);
+// $primaryColor: #00783E;
+$primaryColor: #007489;
 
-
-$blueColor: #0079bf;
-$lightBlueColor: rgba(0, 121, 191, 0.541);
-
-$redColor: #dc143c;
-$lightRedColor: rgba(240, 128, 128, 0.432);
-
-$orangeColor: #ff8c00;
-$lightOrangeColor: rgba(255, 166, 0, 0.473);
-
-$greenColor: rgb(27, 155, 112);
-$lightGreenColor: rgb(168, 214, 193);
-
-$pinkColor: #c38d9e;
-$darkOrange: #e8a87c;
-$darkRed: #e27d60;
-$darkGreen: #41b3a3;
-
-$color1: #99738e;
-$color2: #bc986a;
-$color3: #daad86;
-$color4: #55bcc9;
-$color5: #97caef;
-$color5: #cafafe;
-$color6: #907163;
-$color7: #45a29e;
-$color8: #1f2833;
-$color9: #0b0c10;
-$color10: #116466;
-
-
-$greenTheme0:#17252a;
-$greenTheme1:#05386b;
-$greenTheme2:#379683;
-$greenTheme3:#5cdb95;
-$greenTheme4:#8ee4af;
-$greenTheme5:#edf5e1;
+$primary700: "#00bd87";
+$primary400: "#03D3B5";
+$red400: "#FC5C63";
+$red700: "#FC6687";
+$greyColor: "#E6E6E6";
+$textDark: "#161F6A";
+$textNormal: "#666D92";
+$borderE6: "#E6E6E6";
+$borderF1: "#f1f1f1";
+$backgroundF7: "#f7f7f7";
+$lightGreen: "#00d4b5";
+$warning: "#f4c243";
+$blue400: "#2067fa";
+$purple400: "#8A6AFC";
 
 
 
-$whiteColor: #fff;
-$greyColor: rgba(238, 238, 238, 0.493);
-$lightGreyColor: rgba(238, 238, 238, 0);
-$blackColor: #37474f;
-$textRedColor: #fe3935;
-$textBlueColor: #0079bf;
-$textBlackColor: #37474f;
-$appBackground: #eff1f1;
-$magentaColor: #19b4b4;
 
 
-//$appThemeColor : #14AB72;
-$appThemeColor : #37474f;
+
+// $blueColor: #0079bf;
+// $lightBlueColor: rgba(0, 121, 191, 0.541);
+
+// $redColor: #dc143c;
+// $lightRedColor: rgba(240, 128, 128, 0.432);
+
+// $orangeColor: #ff8c00;
+// $lightOrangeColor: rgba(255, 166, 0, 0.473);
+
+// $greenColor: rgb(27, 155, 112);
+// $lightGreenColor: rgb(168, 214, 193);
+
+// $pinkColor: #c38d9e;
+// $darkOrange: #e8a87c;
+// $darkRed: #e27d60;
+// $darkGreen: #41b3a3;
+
+// $color1: #99738e;
+// $color2: #bc986a;
+// $color3: #daad86;
+// $color4: #55bcc9;
+// $color5: #97caef;
+// $color5: #cafafe;
+// $color6: #907163;
+// $color7: #45a29e;
+// $color8: #1f2833;
+// $color9: #0b0c10;
+// $color10: #116466;
 
 
-.text-red {
-  color: $textRedColor;
-}
+// $greenTheme0:#17252a;
+// $greenTheme1:#05386b;
+// $greenTheme2:#379683;
+// $greenTheme3:#5cdb95;
+// $greenTheme4:#8ee4af;
+// $greenTheme5:#edf5e1;
 
-.text-black {
-  color: $textBlackColor;
-}
 
-.text-blue {
-  color: $textBlueColor;
-}
-.text-orange {
-  color: $orangeColor;
-}
-.text-green {
-  color: rgb(76, 196, 116);
-}
-.text-magenta {
-  color: $magentaColor;
-}
 
-.text-green-deep {
-  color: rgb(69, 179, 105);
-}
+// $whiteColor: #fff;
+// $greyColor: rgba(238, 238, 238, 0.493);
+// $lightGreyColor: rgba(238, 238, 238, 0);
+// $blackColor: #37474f;
+// $textRedColor: #fe3935;
+// $textBlueColor: #0079bf;
+// $textBlackColor: #37474f;
+// $appBackground: #eff1f1;
+// $magentaColor: #19b4b4;
 
-.background-green {
-  background: $greenColor;
-}
 
-.background-blue {
-  background: $textBlueColor;
-}
-.background-magenta {
-  background: $magentaColor;
-}
-.background-orange {
-  background: $color10;
-}
+// //$appThemeColor : #14AB72;
+// $appThemeColor : #37474f;
 
-.background-color {
-  background: #eff1f1;
-}
+
+// .text-red {
+//   color: $textRedColor;
+// }
+
+// .text-black {
+//   color: $textBlackColor;
+// }
+
+// .text-blue {
+//   color: $textBlueColor;
+// }
+// .text-orange {
+//   color: $orangeColor;
+// }
+// .text-green {
+//   color: rgb(76, 196, 116);
+// }
+// .text-magenta {
+//   color: $magentaColor;
+// }
+
+// .text-green-deep {
+//   color: rgb(69, 179, 105);
+// }
+
+// .background-green {
+//   background: $greenColor;
+// }
+
+// .background-blue {
+//   background: $textBlueColor;
+// }
+// .background-magenta {
+//   background: $magentaColor;
+// }
+// .background-orange {
+//   background: $color10;
+// }
+
+// .background-color {
+//   background: #eff1f1;
+// }
 
 @mixin shadow {
   -webkit-box-shadow: 1px 2px 4px 0px rgba(55, 71, 79, 0.37);

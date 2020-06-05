@@ -6,11 +6,14 @@
 .container-cart-preview {
     background-color: $primaryColor;
     position : fixed;
-    padding: 20px;
+    padding: 20px 10px;
     border-radius: 8px 0px 0px 8px;
     bottom   : 300px;
     right    : 0px;
     color: #fff;
+}
+.container-cart-preview:hover{
+    cursor: pointer;
 }
 
 .cart-preview-items {
@@ -19,7 +22,7 @@
 
 .cart-preview-amount{
     margin: 0px;
-    padding: 10px 10px;
+    padding: 10px 5px;
     border-radius: 4px;
     background-color: #fff;
     color: $primaryColor;
@@ -28,3 +31,94 @@
 
 
 //product summary
+
+.container-product-summary{
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    @include shadowBottom();
+    
+}
+
+.container-product-summary-image{
+    height:200px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.product-summary-image{
+    height:200px;
+    width: 200px;
+    transition: transform .4s;
+}
+
+.product-summary-image:hover{
+    transform: scale(1.5); 
+}
+
+.container-product-name{
+    color: $textDark;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 4px ;
+    width: 100%;
+}
+
+.container-product-summary-bottom{
+    display: grid;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.container-product-price{
+    color: $primaryColor;
+    text-align: start;
+    width: 100%; 
+    padding: 4px ;
+}
+
+.button-add-to-cart{
+    
+    background-color: white;
+    width: 120px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: $primaryColor;
+    text-align: bottom;
+    transition: .3s;
+}
+
+.button-add-to-cart:hover{
+    cursor: pointer;
+    background-color: $primaryColor;
+    color: white;
+}
+
+.container-add-to-cart-quantity{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    background-color: $primaryColor;
+    width: 120px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-align: bottom;
+    transition: .3s;
+}
+.container-add-to-cart-quantity:hover{
+    cursor: pointer;
+}
+

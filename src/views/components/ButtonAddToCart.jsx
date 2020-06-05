@@ -3,6 +3,7 @@ import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import useProductStatusInCart from '../hooks/useProductStatusInCart';
 import CartAction from '../../stores/cart/CartAction';
+import {CartIconMedium , PlusIconMedium , MinusIconMedium} from './IconsProvider';
 
 
 const ButtonAddToCart = (props) => {
@@ -25,15 +26,17 @@ const ButtonAddToCart = (props) => {
 
 
     return (
-        <div style={{ padding: "20px" , border:"1px solid"}}>
+        <div>
             {productStatus === "PRODUCT_IN_CART" ?
-                <div>
-                    <button onClick={removeItemFromCart}> -1 </button>
-
-                    <button onClick={additemToCart}> +1 </button>
-                    <div>currentitemscount {productCount}</div>
+                <div className="container-add-to-cart-quantity">
+                    <div onClick={removeItemFromCart}> <MinusIconMedium /> </div>
+                    <div> {productCount}</div>
+                    <div onClick={additemToCart}> <PlusIconMedium /> </div>
                 </div> :
-                <button onClick={additemToCart}> Add to Cart</button>
+                <div className="button-add-to-cart" onClick={additemToCart}>
+                     <CartIconMedium /> 
+                     <div> Cart</div>
+                     </div>
             }
         </div>
     )
