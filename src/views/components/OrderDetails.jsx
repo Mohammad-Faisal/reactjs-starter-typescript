@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectTotalItemCount, selectTotalCost } from '../../stores/cart/CartSelector';
 import ProductInCart from './ProductInCart';
 import _ from 'lodash';
-import { withRouter } from "react-router";
 
 import { CartIconLarge, CloseIconMedium } from './IconsProvider';
+import ProductInOrder from './ProductInOrder';
 
 
-const CartDetails = (props) => {
+const OrderDetails = (props) => {
 
     const dispatch = useDispatch();
     const [visible, setVisible] = useState(true)
@@ -25,23 +25,34 @@ const CartDetails = (props) => {
 
 
     return (
-        <div className="container-cart-details">
+        <div className="container-order-details">
             <div className="container-cart-details-topbar">
-                <div className="cart-details-cart-items"> <CartIconLarge /> {totalItem} items  </div>
-                <div> <CloseIconMedium /></div>
+                Your Order
             </div>
             <div className="container-cart-details-items">
-                {cartIndividualItems.map(productItem => <ProductInCart productItem={productItem} />)}
+                {cartIndividualItems.map(productItem => <ProductInOrder productItem={productItem} />)}
             </div>
-            <div onClick={() => dispatch(props.history.push('confirmOrder'))} className="checkout-button-cart-details">
 
-                <div className="checkout-text"style={{ color: "#fff", fontWeight: "bold" }}> Checkout </div>
-                <div className="checkout-round-text">$ {totalCost}</div>
+            <div style={{ height: "1px", background: "#000000" }}></div>
+
+            <div className="container-total-amount">
+                <b>Total Amount</b>
+                <div>{totalCost}</div>
             </div>
+
+            <div className="container-total-amount">
+                <b>Shipping Cost</b>
+                <div>{60}</div>
+            </div>
+
+            <div style={{ height: "1px", background: "#000000" }}></div>
+            <div className="container-total-amount">
+                <b>Amount to be paid</b>
+                <div>{parseInt(totalCost) + 60}</div>
+            </div>
+
         </div>
-
-
     )
 }
 
-export default withRouter(CartDetails);
+export default OrderDetails;

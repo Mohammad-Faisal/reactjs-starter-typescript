@@ -3,10 +3,12 @@ import './App.scss';
 import './pages/pages.scss';
 import './components/components.scss'
 import { PageProduct } from './pages/PageProduct';
-import CartDetails from './components/CartDetails';
 import styled from 'styled-components';
+import { Route, Switch, withRouter } from "react-router-dom";
+import { PageOrder } from './pages/PageOrder';
+import { ConnectedRouter } from 'connected-react-router'
 
-function App() {
+function App(props) {
   return (
     <AppContainer>
 
@@ -18,11 +20,13 @@ function App() {
         <div> Account Information</div>
       </div>
 
-      <div className="container-app-mainbar">
-        <div> this is the siebar</div>
-        <PageProduct />
-      </div>
-     
+      <ConnectedRouter history={props.history}>
+        <Switch>
+          <Route exact path={"/"} render={() => <PageProduct />} />
+          <Route exact path={"/confirmOrder"} render={() => <PageOrder />} />
+          <Route exact path={"/product"} render={() => <PageProduct />} />
+        </Switch>
+      </ConnectedRouter>
 
     </AppContainer>
   );

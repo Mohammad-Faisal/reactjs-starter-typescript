@@ -96,15 +96,35 @@
     margin-top           : 20px;
 }
 
+.container-product-in-order {
+    height               : fit-content;
+    display              : grid;
+    align-items          : center;
+    grid-template-columns: auto 1fr auto auto auto;
+    grid-column-gap      : 10px;
+    margin-top           : 20px;
+}
+
 .container-product-in-cart-image {
     width        : 80px;
     height       : 80px;
     border-radius: 25px;
 }
 
+.container-product-in-order-image {
+    width        : 50px;
+    height       : 50px;
+    border-radius: 25px;
+}
+
 .product-in-cart-image {
     width : 80px;
     height: 80px;
+}
+
+.product-in-order-image {
+    width : 50px;
+    height: 50px;
 }
 
 .product-in-cart-details {
@@ -157,7 +177,7 @@
     transition           : .3s;
 }
 
-.container-add-to-cart-quantity:hover {
+.container-add-to-cart-quantity-horizontal:hover {
     cursor: pointer;
 }
 
@@ -181,10 +201,41 @@
 }
 
 
+.container-add-to-cart-quantity-normal {
+    display              : grid;
+    grid-template-columns: auto 1fr auto;
+    background-color     : $appBackground;
+    width                : 80px;
+    justify-content      : space-evenly;
+    align-items          : center;
+    padding              : 5px;
+    border-radius        : 8px;
+    color                : $textNormal;
+    text-align           : bottom;
+    transition           : .3s;
+}
+
+.container-add-to-cart-quantity-normal:hover {
+    cursor: pointer;
+}
+
+
+
 
 //cart details
 
 .container-cart-details {
+    background-color  : #fff;
+    display           : grid;
+    grid-template-rows: auto 1fr auto;
+    height            : 100%;
+    margin-bottom     : 20px;
+}
+
+.container-order-details {
+    border            : 1px solid;
+    border-radius     : 4px;
+    padding           : 20px;
     background-color  : #fff;
     display           : grid;
     grid-template-rows: auto 1fr auto;
@@ -215,7 +266,6 @@
     padding  : 20px 10px;
     color    : $primaryColor;
     font-size: 18px;
-
 }
 
 .checkout-button-cart-details {
@@ -225,7 +275,7 @@
     align-self           : end;
     align-items          : center;
     color                : white;
-    padding              : 15px 20px;
+    padding              : 10px 20px;
     border-radius        : 30px;
     margin               : 20px 10px;
 }
@@ -245,4 +295,11 @@
     border-radius   : 15px;
     font-size       : 16px;
     background-color: #fff;
+}
+
+.container-total-amount {
+    display              : grid;
+    grid-template-columns: 1fr auto;
+    text-align           : start;
+    padding              : 10px 0px;
 }
