@@ -31,9 +31,9 @@ const CartDetails = (props) => {
                 <div> <CloseIconMedium /></div>
             </div>
             <div className="container-cart-details-items">
-                {cartIndividualItems.map(productItem => <ProductInCart productItem={productItem} />)}
+                {cartIndividualItems.map(productItem => <ProductInCart key={productItem.id} productItem={productItem} />)}
             </div>
-            <div onClick={() => dispatch(props.history.push('confirmOrder'))} className="checkout-button-cart-details">
+            <div onClick={() => props.history.push('confirmOrder')} className="checkout-button-cart-details">
 
                 <div className="checkout-text"style={{ color: "#fff", fontWeight: "bold" }}> Checkout </div>
                 <div className="checkout-round-text">$ {totalCost}</div>

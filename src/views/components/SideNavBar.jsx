@@ -12,20 +12,17 @@ export default class SideNavBar extends Component {
 
         return (
             <Menu fluid vertical compact color="teal" >
-                {/* <Menu.Item>
-                    <img style={{ width: "30px", height: "30px" }} src='https://react.semantic-ui.com/logo.png' />
-                </Menu.Item> */}
 
                 <Menu.Item
                     name='corona'
                     active={activeItem === 'corona'}
                     onClick={this.handleItemClick}
                 >
-                     <MenuContainer>
+                    <MenuContainer>
                         <Icon name='stethoscope' />
                         <MenuItemText>Corona Products</MenuItemText>
                     </MenuContainer>
-        </Menu.Item>
+                </Menu.Item>
 
                 <Menu.Item
                     name='grocery'
@@ -34,9 +31,9 @@ export default class SideNavBar extends Component {
                 >
                     <MenuContainer>
                         <Icon name='cart arrow down' />
-                        <MenuItemText>Grocery and Household</MenuItemText>
+                        <MenuItemText>Grocery </MenuItemText>
                     </MenuContainer>
-        </Menu.Item>
+                </Menu.Item>
 
                 <Menu.Item
                     name='meat'
@@ -55,23 +52,23 @@ export default class SideNavBar extends Component {
                     active={activeItem === 'mom'}
                     onClick={this.handleItemClick}
                 >
-                      <MenuContainer>
+                    <MenuContainer>
                         <Icon name='birthday cake' />
                         <MenuItemText>Mom and Kids</MenuItemText>
                     </MenuContainer>
 
-        </Menu.Item>
+                </Menu.Item>
 
                 <Menu.Item
                     name='fruit'
                     active={activeItem === 'fruit'}
                     onClick={this.handleItemClick}
                 >
-                     <MenuContainer>
+                    <MenuContainer>
                         <Icon name='new pied piper' />
                         <MenuItemText>Fruits and Dates</MenuItemText>
                     </MenuContainer>
-        </Menu.Item>
+                </Menu.Item>
 
             </Menu>
         )

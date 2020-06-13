@@ -33,7 +33,7 @@ const ProductInOrder = (props) => {
 
             {/* <ButtonChangeQuantityInOrder productItem={props.productItem} /> */}
 
-            <b style={{fontSize:"16px"}} className="container-product-pric">$ {parseInt(props.productItem.price) * parseInt(productCount)}</b>
+            <b style={{fontSize:"16px" }} className="container-product-pric">$ {parseInt(props.productItem.price) * parseInt(productCount)}</b>
 
             <div className="container-icon-delete" style={{ color: "#FC5C63" }} onClick={removeProductFromCart}><DeleteIconMedium /></div>
 

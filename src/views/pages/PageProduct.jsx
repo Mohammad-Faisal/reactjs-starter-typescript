@@ -16,7 +16,7 @@ export const PageProduct = (props) => {
 
         <div className="container-page-products">
 
-            <div style={{  height:"100%", width:"250px", position: "fixed" }}>
+            <div style={{  height:"100vh", width:"250px", position: "fixed" }}>
                 <SideNavBar />
             </div>
 

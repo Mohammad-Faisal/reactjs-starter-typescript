@@ -3,6 +3,7 @@ body {
   padding-right: 0 !important;
   font-family: 'Titillium web' , sans-serif !important;
   -webkit-font-smoothing: antialiased;
+  height: 100vh !important;
   -moz-osx-font-smoothing: grayscale;
 }
 
